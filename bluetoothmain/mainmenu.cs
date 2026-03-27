@@ -13,7 +13,6 @@ using System.IO;
 using System.Management;
 using System.Text.RegularExpressions;
 
-//aaaaa
 namespace bluetoothmain
 {
     public partial class mainmenu : Form
