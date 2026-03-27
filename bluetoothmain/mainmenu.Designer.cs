@@ -148,7 +148,7 @@ namespace bluetoothmain
             this.setting_panel.Controls.Add(this.wifi);
             this.setting_panel.Controls.Add(this.bluetooth);
             this.setting_panel.Controls.Add(this.usb);
-            this.setting_panel.Location = new System.Drawing.Point(144, 104);
+            this.setting_panel.Location = new System.Drawing.Point(71, 43);
             this.setting_panel.Name = "setting_panel";
             this.setting_panel.Size = new System.Drawing.Size(428, 475);
             this.setting_panel.TabIndex = 4;
@@ -277,7 +277,6 @@ namespace bluetoothmain
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.setting_panel);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -289,6 +288,7 @@ namespace bluetoothmain
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.setting_panel);
             this.panel2.Controls.Add(this.kt);
             this.panel2.Controls.Add(this.hs);
             this.panel2.Controls.Add(this.gv);
@@ -1102,7 +1102,7 @@ namespace bluetoothmain
             this.ht_usb.Padding = new System.Windows.Forms.Padding(3);
             this.ht_usb.Size = new System.Drawing.Size(156, 74);
             this.ht_usb.TabIndex = 2;
-            this.ht_usb.Text = "tabPage10";
+            this.ht_usb.Text = "ht_usb";
             this.ht_usb.UseVisualStyleBackColor = true;
             // 
             // mainmenu
