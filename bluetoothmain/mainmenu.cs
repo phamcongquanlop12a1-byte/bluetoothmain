@@ -12,8 +12,8 @@ using System.Net;
 using System.IO;
 using System.Management;
 using System.Text.RegularExpressions;
-rerer
-aaaaaaa
+
+
 namespace bluetoothmain
 {
     public partial class mainmenu : Form
@@ -625,6 +625,17 @@ namespace bluetoothmain
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void settings_Click(object sender, EventArgs e)
+        {
+            setting_panel.Visible = true;
+        }
+
+        private void close_setting_Click(object sender, EventArgs e)
+        {
+            setting_panel.Visible = false;
 
         }
 
