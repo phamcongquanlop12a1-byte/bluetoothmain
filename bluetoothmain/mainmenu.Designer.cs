@@ -31,11 +31,18 @@ namespace bluetoothmain
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.setting_panel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.wf = new System.Windows.Forms.TabPage();
+            this.bt = new System.Windows.Forms.TabPage();
+            this.close_setting = new System.Windows.Forms.Button();
+            this.wifi = new System.Windows.Forms.Button();
+            this.bluetooth = new System.Windows.Forms.Button();
+            this.usb = new System.Windows.Forms.Button();
+            this.settings = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.usb = new System.Windows.Forms.Button();
-            this.bluetooth = new System.Windows.Forms.Button();
-            this.wifi = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.kt = new System.Windows.Forms.Button();
@@ -106,14 +113,11 @@ namespace bluetoothmain
             this.ping_timer = new System.Windows.Forms.Timer(this.components);
             this.wifi_ping_timer = new System.Windows.Forms.Timer(this.components);
             this.usb_ping_timer = new System.Windows.Forms.Timer(this.components);
-            this.setting_panel = new System.Windows.Forms.Panel();
-            this.settings = new System.Windows.Forms.Button();
-            this.close_setting = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.wf = new System.Windows.Forms.TabPage();
-            this.bt = new System.Windows.Forms.TabPage();
+            this.ht_usb = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
+            this.setting_panel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tabControl2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -124,14 +128,10 @@ namespace bluetoothmain
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.tabPage9.SuspendLayout();
-            this.setting_panel.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.tabControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.setting_panel);
             this.panel1.Controls.Add(this.settings);
             this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Location = new System.Drawing.Point(0, -3);
@@ -139,6 +139,112 @@ namespace bluetoothmain
             this.panel1.Size = new System.Drawing.Size(1600, 900);
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // setting_panel
+            // 
+            this.setting_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.setting_panel.Controls.Add(this.panel3);
+            this.setting_panel.Controls.Add(this.close_setting);
+            this.setting_panel.Controls.Add(this.wifi);
+            this.setting_panel.Controls.Add(this.bluetooth);
+            this.setting_panel.Controls.Add(this.usb);
+            this.setting_panel.Location = new System.Drawing.Point(144, 104);
+            this.setting_panel.Name = "setting_panel";
+            this.setting_panel.Size = new System.Drawing.Size(428, 475);
+            this.setting_panel.TabIndex = 4;
+            this.setting_panel.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.tabControl2);
+            this.panel3.Location = new System.Drawing.Point(237, 125);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(164, 200);
+            this.panel3.TabIndex = 4;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.wf);
+            this.tabControl2.Controls.Add(this.bt);
+            this.tabControl2.Controls.Add(this.ht_usb);
+            this.tabControl2.Location = new System.Drawing.Point(0, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(164, 100);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // wf
+            // 
+            this.wf.Location = new System.Drawing.Point(4, 22);
+            this.wf.Name = "wf";
+            this.wf.Padding = new System.Windows.Forms.Padding(3);
+            this.wf.Size = new System.Drawing.Size(156, 74);
+            this.wf.TabIndex = 0;
+            this.wf.Text = "wf";
+            this.wf.UseVisualStyleBackColor = true;
+            // 
+            // bt
+            // 
+            this.bt.Location = new System.Drawing.Point(4, 22);
+            this.bt.Name = "bt";
+            this.bt.Padding = new System.Windows.Forms.Padding(3);
+            this.bt.Size = new System.Drawing.Size(156, 74);
+            this.bt.TabIndex = 1;
+            this.bt.Text = "bt";
+            this.bt.UseVisualStyleBackColor = true;
+            // 
+            // close_setting
+            // 
+            this.close_setting.Location = new System.Drawing.Point(391, 3);
+            this.close_setting.Name = "close_setting";
+            this.close_setting.Size = new System.Drawing.Size(28, 28);
+            this.close_setting.TabIndex = 3;
+            this.close_setting.Text = "X";
+            this.close_setting.UseVisualStyleBackColor = true;
+            this.close_setting.Click += new System.EventHandler(this.close_setting_Click);
+            // 
+            // wifi
+            // 
+            this.wifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wifi.Location = new System.Drawing.Point(-1, 59);
+            this.wifi.Name = "wifi";
+            this.wifi.Size = new System.Drawing.Size(181, 67);
+            this.wifi.TabIndex = 0;
+            this.wifi.Text = "Wifi";
+            this.wifi.UseVisualStyleBackColor = true;
+            this.wifi.Click += new System.EventHandler(this.wifi_Click);
+            // 
+            // bluetooth
+            // 
+            this.bluetooth.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bluetooth.Location = new System.Drawing.Point(-1, 215);
+            this.bluetooth.Name = "bluetooth";
+            this.bluetooth.Size = new System.Drawing.Size(181, 67);
+            this.bluetooth.TabIndex = 1;
+            this.bluetooth.Text = "Bluetooth";
+            this.bluetooth.UseVisualStyleBackColor = true;
+            this.bluetooth.Click += new System.EventHandler(this.bluetooth_usb_Click);
+            // 
+            // usb
+            // 
+            this.usb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usb.Location = new System.Drawing.Point(-1, 347);
+            this.usb.Name = "usb";
+            this.usb.Size = new System.Drawing.Size(181, 67);
+            this.usb.TabIndex = 2;
+            this.usb.Text = "USB";
+            this.usb.UseVisualStyleBackColor = true;
+            this.usb.Click += new System.EventHandler(this.usb_Click);
+            // 
+            // settings
+            // 
+            this.settings.Location = new System.Drawing.Point(21, 552);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(89, 38);
+            this.settings.TabIndex = 5;
+            this.settings.Text = "settings";
+            this.settings.UseVisualStyleBackColor = true;
+            this.settings.Click += new System.EventHandler(this.settings_Click);
             // 
             // tabControl1
             // 
@@ -169,45 +275,13 @@ namespace bluetoothmain
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
-            // usb
-            // 
-            this.usb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usb.Location = new System.Drawing.Point(-1, 347);
-            this.usb.Name = "usb";
-            this.usb.Size = new System.Drawing.Size(181, 67);
-            this.usb.TabIndex = 2;
-            this.usb.Text = "USB";
-            this.usb.UseVisualStyleBackColor = true;
-            this.usb.Click += new System.EventHandler(this.usb_Click);
-            // 
-            // bluetooth
-            // 
-            this.bluetooth.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bluetooth.Location = new System.Drawing.Point(-1, 215);
-            this.bluetooth.Name = "bluetooth";
-            this.bluetooth.Size = new System.Drawing.Size(181, 67);
-            this.bluetooth.TabIndex = 1;
-            this.bluetooth.Text = "Bluetooth";
-            this.bluetooth.UseVisualStyleBackColor = true;
-            this.bluetooth.Click += new System.EventHandler(this.bluetooth_usb_Click);
-            // 
-            // wifi
-            // 
-            this.wifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wifi.Location = new System.Drawing.Point(-1, 59);
-            this.wifi.Name = "wifi";
-            this.wifi.Size = new System.Drawing.Size(181, 67);
-            this.wifi.TabIndex = 0;
-            this.wifi.Text = "Wifi";
-            this.wifi.UseVisualStyleBackColor = true;
-            this.wifi.Click += new System.EventHandler(this.wifi_Click);
-            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.setting_panel);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1272, 694);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
@@ -269,7 +343,7 @@ namespace bluetoothmain
             this.tabPage2.Controls.Add(this.tk);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1272, 694);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
@@ -335,7 +409,7 @@ namespace bluetoothmain
             this.tabPage3.Controls.Add(this.refresh);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1272, 694);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
@@ -659,7 +733,7 @@ namespace bluetoothmain
             this.tabPage6.Controls.Add(this.label3);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(1272, 694);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
@@ -721,7 +795,7 @@ namespace bluetoothmain
             this.tabPage7.Controls.Add(this.wfpan1cb);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(1272, 694);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "tabPage7";
@@ -948,7 +1022,7 @@ namespace bluetoothmain
             this.tabPage8.Controls.Add(this.svTH);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(1272, 694);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "tabPage8";
@@ -980,7 +1054,7 @@ namespace bluetoothmain
             this.tabPage9.Controls.Add(this.backpg9);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage9.Size = new System.Drawing.Size(1272, 694);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "tabPage9";
@@ -1021,77 +1095,15 @@ namespace bluetoothmain
             this.usb_ping_timer.Interval = 1000;
             this.usb_ping_timer.Tick += new System.EventHandler(this.usb_ping_timer_Tick);
             // 
-            // setting_panel
+            // ht_usb
             // 
-            this.setting_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.setting_panel.Controls.Add(this.panel3);
-            this.setting_panel.Controls.Add(this.close_setting);
-            this.setting_panel.Controls.Add(this.wifi);
-            this.setting_panel.Controls.Add(this.bluetooth);
-            this.setting_panel.Controls.Add(this.usb);
-            this.setting_panel.Location = new System.Drawing.Point(144, 104);
-            this.setting_panel.Name = "setting_panel";
-            this.setting_panel.Size = new System.Drawing.Size(428, 475);
-            this.setting_panel.TabIndex = 4;
-            this.setting_panel.Visible = false;
-            // 
-            // settings
-            // 
-            this.settings.Location = new System.Drawing.Point(21, 552);
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(89, 38);
-            this.settings.TabIndex = 5;
-            this.settings.Text = "settings";
-            this.settings.UseVisualStyleBackColor = true;
-            this.settings.Click += new System.EventHandler(this.settings_Click);
-            // 
-            // close_setting
-            // 
-            this.close_setting.Location = new System.Drawing.Point(391, 3);
-            this.close_setting.Name = "close_setting";
-            this.close_setting.Size = new System.Drawing.Size(28, 28);
-            this.close_setting.TabIndex = 3;
-            this.close_setting.Text = "X";
-            this.close_setting.UseVisualStyleBackColor = true;
-            this.close_setting.Click += new System.EventHandler(this.close_setting_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.tabControl2);
-            this.panel3.Location = new System.Drawing.Point(237, 125);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(164, 200);
-            this.panel3.TabIndex = 4;
-            // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.wf);
-            this.tabControl2.Controls.Add(this.bt);
-            this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(143, 100);
-            this.tabControl2.TabIndex = 0;
-            // 
-            // wf
-            // 
-            this.wf.Location = new System.Drawing.Point(4, 22);
-            this.wf.Name = "wf";
-            this.wf.Padding = new System.Windows.Forms.Padding(3);
-            this.wf.Size = new System.Drawing.Size(135, 74);
-            this.wf.TabIndex = 0;
-            this.wf.Text = "wf";
-            this.wf.UseVisualStyleBackColor = true;
-            // 
-            // bt
-            // 
-            this.bt.Location = new System.Drawing.Point(4, 22);
-            this.bt.Name = "bt";
-            this.bt.Padding = new System.Windows.Forms.Padding(3);
-            this.bt.Size = new System.Drawing.Size(135, 74);
-            this.bt.TabIndex = 1;
-            this.bt.Text = "bt";
-            this.bt.UseVisualStyleBackColor = true;
+            this.ht_usb.Location = new System.Drawing.Point(4, 22);
+            this.ht_usb.Name = "ht_usb";
+            this.ht_usb.Padding = new System.Windows.Forms.Padding(3);
+            this.ht_usb.Size = new System.Drawing.Size(156, 74);
+            this.ht_usb.TabIndex = 2;
+            this.ht_usb.Text = "tabPage10";
+            this.ht_usb.UseVisualStyleBackColor = true;
             // 
             // mainmenu
             // 
@@ -1108,6 +1120,9 @@ namespace bluetoothmain
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainmenu_FormClosing);
             this.Load += new System.EventHandler(this.mainmenu_Load);
             this.panel1.ResumeLayout(false);
+            this.setting_panel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1124,9 +1139,6 @@ namespace bluetoothmain
             this.tabPage8.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
-            this.setting_panel.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1213,7 +1225,13 @@ namespace bluetoothmain
         private System.Windows.Forms.Button close_setting;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabControl tabControl2;
+<<<<<<< HEAD
         private System.Windows.Forms.TabPage wf;
         private System.Windows.Forms.TabPage bt;
+        private System.Windows.Forms.TabPage ht_usb;
+=======
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.TabPage tabPage11;
+>>>>>>> e83f7e322e3c36948f2753d66b9b20cc6b933fca
     }
 }
