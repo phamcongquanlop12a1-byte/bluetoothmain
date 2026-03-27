@@ -139,16 +139,15 @@ namespace bluetoothmain
             this.panel1.Location = new System.Drawing.Point(0, -5);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2133, 1108);
+            this.panel1.Size = new System.Drawing.Size(1600, 900);
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // settings
             // 
-            this.settings.Location = new System.Drawing.Point(28, 679);
-            this.settings.Margin = new System.Windows.Forms.Padding(4);
+            this.settings.Location = new System.Drawing.Point(21, 552);
             this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(119, 47);
+            this.settings.Size = new System.Drawing.Size(89, 38);
             this.settings.TabIndex = 5;
             this.settings.Text = "settings";
             this.settings.UseVisualStyleBackColor = true;
@@ -165,17 +164,16 @@ namespace bluetoothmain
             this.setting_panel.Location = new System.Drawing.Point(95, 53);
             this.setting_panel.Margin = new System.Windows.Forms.Padding(4);
             this.setting_panel.Name = "setting_panel";
-            this.setting_panel.Size = new System.Drawing.Size(743, 758);
+            this.setting_panel.Size = new System.Drawing.Size(558, 616);
             this.setting_panel.TabIndex = 4;
             this.setting_panel.Visible = false;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.tabControl2);
-            this.panel3.Location = new System.Drawing.Point(316, 154);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(237, 125);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(292, 303);
+            this.panel3.Size = new System.Drawing.Size(219, 246);
             this.panel3.TabIndex = 4;
             // 
             // tabControl2
@@ -184,10 +182,9 @@ namespace bluetoothmain
             this.tabControl2.Controls.Add(this.bt);
             this.tabControl2.Controls.Add(this.ht_usb);
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(292, 151);
+            this.tabControl2.Size = new System.Drawing.Size(219, 123);
             this.tabControl2.TabIndex = 0;
             // 
             // wf
@@ -225,10 +222,9 @@ namespace bluetoothmain
             // 
             // close_setting
             // 
-            this.close_setting.Location = new System.Drawing.Point(521, 4);
-            this.close_setting.Margin = new System.Windows.Forms.Padding(4);
+            this.close_setting.Location = new System.Drawing.Point(391, 3);
             this.close_setting.Name = "close_setting";
-            this.close_setting.Size = new System.Drawing.Size(49, 42);
+            this.close_setting.Size = new System.Drawing.Size(37, 34);
             this.close_setting.TabIndex = 3;
             this.close_setting.Text = "X";
             this.close_setting.UseVisualStyleBackColor = true;
@@ -237,10 +233,9 @@ namespace bluetoothmain
             // wifi
             // 
             this.wifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wifi.Location = new System.Drawing.Point(-1, 73);
-            this.wifi.Margin = new System.Windows.Forms.Padding(4);
+            this.wifi.Location = new System.Drawing.Point(-1, 59);
             this.wifi.Name = "wifi";
-            this.wifi.Size = new System.Drawing.Size(321, 101);
+            this.wifi.Size = new System.Drawing.Size(241, 82);
             this.wifi.TabIndex = 0;
             this.wifi.Text = "Wifi";
             this.wifi.UseVisualStyleBackColor = true;
@@ -249,10 +244,9 @@ namespace bluetoothmain
             // bluetooth
             // 
             this.bluetooth.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bluetooth.Location = new System.Drawing.Point(-1, 265);
-            this.bluetooth.Margin = new System.Windows.Forms.Padding(4);
+            this.bluetooth.Location = new System.Drawing.Point(-1, 215);
             this.bluetooth.Name = "bluetooth";
-            this.bluetooth.Size = new System.Drawing.Size(321, 101);
+            this.bluetooth.Size = new System.Drawing.Size(241, 82);
             this.bluetooth.TabIndex = 1;
             this.bluetooth.Text = "Bluetooth";
             this.bluetooth.UseVisualStyleBackColor = true;
@@ -261,10 +255,9 @@ namespace bluetoothmain
             // usb
             // 
             this.usb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usb.Location = new System.Drawing.Point(-1, 427);
-            this.usb.Margin = new System.Windows.Forms.Padding(4);
+            this.usb.Location = new System.Drawing.Point(-1, 347);
             this.usb.Name = "usb";
-            this.usb.Size = new System.Drawing.Size(321, 101);
+            this.usb.Size = new System.Drawing.Size(241, 82);
             this.usb.TabIndex = 2;
             this.usb.Text = "USB";
             this.usb.UseVisualStyleBackColor = true;
@@ -706,10 +699,9 @@ namespace bluetoothmain
             // connectwifi
             // 
             this.connectwifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connectwifi.Location = new System.Drawing.Point(1072, 438);
-            this.connectwifi.Margin = new System.Windows.Forms.Padding(4);
+            this.connectwifi.Location = new System.Drawing.Point(804, 356);
             this.connectwifi.Name = "connectwifi";
-            this.connectwifi.Size = new System.Drawing.Size(237, 94);
+            this.connectwifi.Size = new System.Drawing.Size(178, 76);
             this.connectwifi.TabIndex = 1;
             this.connectwifi.Text = "CONNECT";
             this.connectwifi.UseVisualStyleBackColor = true;
@@ -1202,15 +1194,24 @@ namespace bluetoothmain
             this.tabControl1.TabIndex = 20;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
+            // a
+            // 
+            this.a.Location = new System.Drawing.Point(4, 22);
+            this.a.Name = "a";
+            this.a.Padding = new System.Windows.Forms.Padding(3);
+            this.a.Size = new System.Drawing.Size(1272, 694);
+            this.a.TabIndex = 9;
+            this.a.Text = "a";
+            this.a.UseVisualStyleBackColor = true;
+            // 
             // mainmenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(1604, 838);
+            this.ClientSize = new System.Drawing.Size(1203, 681);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "mainmenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
