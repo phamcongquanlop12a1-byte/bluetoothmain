@@ -204,8 +204,7 @@ namespace bluetoothmain
             this.setting_panel.Controls.Add(this.wifi);
             this.setting_panel.Controls.Add(this.bluetooth);
             this.setting_panel.Controls.Add(this.usb);
-            this.setting_panel.Location = new System.Drawing.Point(192, 96);
-            this.setting_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.setting_panel.Location = new System.Drawing.Point(71, 43);
             this.setting_panel.Name = "setting_panel";
             this.setting_panel.Size = new System.Drawing.Size(558, 616);
             this.setting_panel.TabIndex = 4;
@@ -312,8 +311,59 @@ namespace bluetoothmain
             this.usb.UseVisualStyleBackColor = true;
             this.usb.Click += new System.EventHandler(this.usb_Click);
             // 
+            // settings
+            // 
+            this.settings.Location = new System.Drawing.Point(21, 552);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(89, 38);
+            this.settings.TabIndex = 5;
+            this.settings.Text = "settings";
+            this.settings.UseVisualStyleBackColor = true;
+            this.settings.Click += new System.EventHandler(this.settings_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.MaximumSize = new System.Drawing.Size(1280, 720);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1280, 720);
+            this.tabControl1.TabIndex = 20;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1272, 694);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1272, 694);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.setting_panel);
             this.panel2.Controls.Add(this.kt);
             this.panel2.Controls.Add(this.hs);
             this.panel2.Controls.Add(this.gv);
@@ -1184,6 +1234,16 @@ namespace bluetoothmain
             // 
             this.usb_ping_timer.Interval = 1000;
             this.usb_ping_timer.Tick += new System.EventHandler(this.usb_ping_timer_Tick);
+            // 
+            // ht_usb
+            // 
+            this.ht_usb.Location = new System.Drawing.Point(4, 22);
+            this.ht_usb.Name = "ht_usb";
+            this.ht_usb.Padding = new System.Windows.Forms.Padding(3);
+            this.ht_usb.Size = new System.Drawing.Size(156, 74);
+            this.ht_usb.TabIndex = 2;
+            this.ht_usb.Text = "ht_usb";
+            this.ht_usb.UseVisualStyleBackColor = true;
             // 
             // mainmenu
             // 
