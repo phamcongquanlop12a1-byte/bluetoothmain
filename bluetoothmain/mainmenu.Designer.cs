@@ -32,10 +32,6 @@ namespace bluetoothmain
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.settings = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.setting_panel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -46,9 +42,10 @@ namespace bluetoothmain
             this.wifi = new System.Windows.Forms.Button();
             this.bluetooth = new System.Windows.Forms.Button();
             this.usb = new System.Windows.Forms.Button();
-            this.kt = new System.Windows.Forms.Button();
-            this.hs = new System.Windows.Forms.Button();
-            this.gv = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.log = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -110,17 +107,19 @@ namespace bluetoothmain
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.comusb = new System.Windows.Forms.Label();
             this.backpg9 = new System.Windows.Forms.Button();
+            this.kt = new System.Windows.Forms.Button();
+            this.hs = new System.Windows.Forms.Button();
+            this.gv = new System.Windows.Forms.Button();
             this.serCOM = new System.IO.Ports.SerialPort(this.components);
             this.ping_timer = new System.Windows.Forms.Timer(this.components);
             this.wifi_ping_timer = new System.Windows.Forms.Timer(this.components);
             this.usb_ping_timer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.setting_panel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -144,56 +143,13 @@ namespace bluetoothmain
             // settings
             // 
             this.settings.Location = new System.Drawing.Point(28, 679);
-            this.settings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.settings.Margin = new System.Windows.Forms.Padding(4);
             this.settings.Name = "settings";
             this.settings.Size = new System.Drawing.Size(119, 47);
             this.settings.TabIndex = 5;
             this.settings.Text = "settings";
             this.settings.UseVisualStyleBackColor = true;
             this.settings.Click += new System.EventHandler(this.settings_Click);
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabControl1.MaximumSize = new System.Drawing.Size(1707, 886);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1707, 886);
-            this.tabControl1.TabIndex = 20;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1699, 857);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1699, 857);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // setting_panel
             // 
@@ -214,7 +170,7 @@ namespace bluetoothmain
             // 
             this.panel3.Controls.Add(this.tabControl2);
             this.panel3.Location = new System.Drawing.Point(316, 154);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(164, 200);
             this.panel3.TabIndex = 4;
@@ -225,7 +181,7 @@ namespace bluetoothmain
             this.tabControl2.Controls.Add(this.bt);
             this.tabControl2.Controls.Add(this.ht_usb);
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(164, 100);
@@ -233,33 +189,33 @@ namespace bluetoothmain
             // 
             // wf
             // 
-            this.wf.Location = new System.Drawing.Point(4, 25);
-            this.wf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wf.Location = new System.Drawing.Point(4, 22);
+            this.wf.Margin = new System.Windows.Forms.Padding(4);
             this.wf.Name = "wf";
-            this.wf.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.wf.Size = new System.Drawing.Size(211, 94);
+            this.wf.Padding = new System.Windows.Forms.Padding(4);
+            this.wf.Size = new System.Drawing.Size(156, 74);
             this.wf.TabIndex = 0;
             this.wf.Text = "wf";
             this.wf.UseVisualStyleBackColor = true;
             // 
             // bt
             // 
-            this.bt.Location = new System.Drawing.Point(4, 25);
-            this.bt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt.Location = new System.Drawing.Point(4, 22);
+            this.bt.Margin = new System.Windows.Forms.Padding(4);
             this.bt.Name = "bt";
-            this.bt.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bt.Size = new System.Drawing.Size(211, 94);
+            this.bt.Padding = new System.Windows.Forms.Padding(4);
+            this.bt.Size = new System.Drawing.Size(156, 74);
             this.bt.TabIndex = 1;
             this.bt.Text = "bt";
             this.bt.UseVisualStyleBackColor = true;
             // 
             // ht_usb
             // 
-            this.ht_usb.Location = new System.Drawing.Point(4, 25);
-            this.ht_usb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ht_usb.Location = new System.Drawing.Point(4, 22);
+            this.ht_usb.Margin = new System.Windows.Forms.Padding(4);
             this.ht_usb.Name = "ht_usb";
-            this.ht_usb.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ht_usb.Size = new System.Drawing.Size(211, 94);
+            this.ht_usb.Padding = new System.Windows.Forms.Padding(4);
+            this.ht_usb.Size = new System.Drawing.Size(156, 74);
             this.ht_usb.TabIndex = 2;
             this.ht_usb.Text = "ht_usb";
             this.ht_usb.UseVisualStyleBackColor = true;
@@ -267,7 +223,7 @@ namespace bluetoothmain
             // close_setting
             // 
             this.close_setting.Location = new System.Drawing.Point(521, 4);
-            this.close_setting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.close_setting.Margin = new System.Windows.Forms.Padding(4);
             this.close_setting.Name = "close_setting";
             this.close_setting.Size = new System.Drawing.Size(28, 28);
             this.close_setting.TabIndex = 3;
@@ -279,7 +235,7 @@ namespace bluetoothmain
             // 
             this.wifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wifi.Location = new System.Drawing.Point(-1, 73);
-            this.wifi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wifi.Margin = new System.Windows.Forms.Padding(4);
             this.wifi.Name = "wifi";
             this.wifi.Size = new System.Drawing.Size(181, 67);
             this.wifi.TabIndex = 0;
@@ -291,7 +247,7 @@ namespace bluetoothmain
             // 
             this.bluetooth.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bluetooth.Location = new System.Drawing.Point(-1, 265);
-            this.bluetooth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bluetooth.Margin = new System.Windows.Forms.Padding(4);
             this.bluetooth.Name = "bluetooth";
             this.bluetooth.Size = new System.Drawing.Size(181, 67);
             this.bluetooth.TabIndex = 1;
@@ -303,7 +259,7 @@ namespace bluetoothmain
             // 
             this.usb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usb.Location = new System.Drawing.Point(-1, 427);
-            this.usb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usb.Margin = new System.Windows.Forms.Padding(4);
             this.usb.Name = "usb";
             this.usb.Size = new System.Drawing.Size(181, 67);
             this.usb.TabIndex = 2;
@@ -311,44 +267,55 @@ namespace bluetoothmain
             this.usb.UseVisualStyleBackColor = true;
             this.usb.Click += new System.EventHandler(this.usb_Click);
             // 
-            // kt
+            // tabControl1
             // 
-            this.kt.AutoSize = true;
-            this.kt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kt.Location = new System.Drawing.Point(709, 475);
-            this.kt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.kt.Name = "kt";
-            this.kt.Size = new System.Drawing.Size(217, 93);
-            this.kt.TabIndex = 5;
-            this.kt.Text = "Kiểm tra";
-            this.kt.UseVisualStyleBackColor = true;
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.MaximumSize = new System.Drawing.Size(1707, 886);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1600, 886);
+            this.tabControl1.TabIndex = 20;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // hs
+            // tabPage5
             // 
-            this.hs.AutoSize = true;
-            this.hs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hs.Location = new System.Drawing.Point(709, 338);
-            this.hs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.hs.Name = "hs";
-            this.hs.Size = new System.Drawing.Size(217, 93);
-            this.hs.TabIndex = 4;
-            this.hs.Text = "Sinh Viên";
-            this.hs.UseVisualStyleBackColor = true;
-            this.hs.Click += new System.EventHandler(this.hs_Click_1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1592, 860);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
-            // gv
+            // tabPage1
             // 
-            this.gv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gv.AutoSize = true;
-            this.gv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gv.Location = new System.Drawing.Point(709, 201);
-            this.gv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gv.Name = "gv";
-            this.gv.Size = new System.Drawing.Size(217, 93);
-            this.gv.TabIndex = 3;
-            this.gv.Text = "Giáo Viên";
-            this.gv.UseVisualStyleBackColor = true;
-            this.gv.Click += new System.EventHandler(this.gv_Click_1);
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1592, 860);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -357,11 +324,11 @@ namespace bluetoothmain
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.mk);
             this.tabPage2.Controls.Add(this.tk);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1699, 857);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(1592, 860);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -370,7 +337,7 @@ namespace bluetoothmain
             // 
             this.log.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.log.Location = new System.Drawing.Point(737, 444);
-            this.log.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.log.Margin = new System.Windows.Forms.Padding(4);
             this.log.Name = "log";
             this.log.Size = new System.Drawing.Size(189, 94);
             this.log.TabIndex = 9;
@@ -404,7 +371,7 @@ namespace bluetoothmain
             // 
             this.mk.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mk.Location = new System.Drawing.Point(751, 364);
-            this.mk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mk.Margin = new System.Windows.Forms.Padding(4);
             this.mk.Name = "mk";
             this.mk.PasswordChar = '*';
             this.mk.Size = new System.Drawing.Size(299, 29);
@@ -415,7 +382,7 @@ namespace bluetoothmain
             // 
             this.tk.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tk.Location = new System.Drawing.Point(751, 294);
-            this.tk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tk.Margin = new System.Windows.Forms.Padding(4);
             this.tk.Name = "tk";
             this.tk.Size = new System.Drawing.Size(299, 29);
             this.tk.TabIndex = 5;
@@ -427,11 +394,11 @@ namespace bluetoothmain
             this.tabPage3.Controls.Add(this.buttona);
             this.tabPage3.Controls.Add(this.COMcbo);
             this.tabPage3.Controls.Add(this.refresh);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage3.Size = new System.Drawing.Size(1699, 857);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Size = new System.Drawing.Size(1592, 860);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -443,7 +410,7 @@ namespace bluetoothmain
             this.backpg3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backpg3.Image = global::bluetoothmain.Properties.Resources.back;
             this.backpg3.Location = new System.Drawing.Point(11, 711);
-            this.backpg3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backpg3.Margin = new System.Windows.Forms.Padding(4);
             this.backpg3.Name = "backpg3";
             this.backpg3.Size = new System.Drawing.Size(122, 72);
             this.backpg3.TabIndex = 39;
@@ -454,7 +421,7 @@ namespace bluetoothmain
             // 
             this.buttona.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttona.Location = new System.Drawing.Point(984, 395);
-            this.buttona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttona.Margin = new System.Windows.Forms.Padding(4);
             this.buttona.Name = "buttona";
             this.buttona.Size = new System.Drawing.Size(157, 53);
             this.buttona.TabIndex = 10;
@@ -466,7 +433,7 @@ namespace bluetoothmain
             // 
             this.COMcbo.FormattingEnabled = true;
             this.COMcbo.Location = new System.Drawing.Point(504, 417);
-            this.COMcbo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.COMcbo.Margin = new System.Windows.Forms.Padding(4);
             this.COMcbo.Name = "COMcbo";
             this.COMcbo.Size = new System.Drawing.Size(148, 21);
             this.COMcbo.TabIndex = 9;
@@ -477,7 +444,7 @@ namespace bluetoothmain
             // 
             this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.Location = new System.Drawing.Point(735, 395);
-            this.refresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.refresh.Margin = new System.Windows.Forms.Padding(4);
             this.refresh.Name = "refresh";
             this.refresh.Size = new System.Drawing.Size(157, 53);
             this.refresh.TabIndex = 17;
@@ -507,10 +474,10 @@ namespace bluetoothmain
             this.tabPage4.Controls.Add(this.pan3cb);
             this.tabPage4.Controls.Add(this.pan2cb);
             this.tabPage4.Controls.Add(this.pan1cb);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1699, 857);
+            this.tabPage4.Size = new System.Drawing.Size(1592, 860);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
@@ -531,7 +498,7 @@ namespace bluetoothmain
             // 
             this.disconnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.disconnect.Location = new System.Drawing.Point(-1, 738);
-            this.disconnect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.disconnect.Margin = new System.Windows.Forms.Padding(4);
             this.disconnect.Name = "disconnect";
             this.disconnect.Size = new System.Drawing.Size(150, 50);
             this.disconnect.TabIndex = 2;
@@ -543,7 +510,7 @@ namespace bluetoothmain
             // 
             this.menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu.Location = new System.Drawing.Point(11, 945);
-            this.menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menu.Margin = new System.Windows.Forms.Padding(4);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(150, 50);
             this.menu.TabIndex = 39;
@@ -555,7 +522,7 @@ namespace bluetoothmain
             // 
             this.backpg4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backpg4.Location = new System.Drawing.Point(236, 945);
-            this.backpg4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backpg4.Margin = new System.Windows.Forms.Padding(4);
             this.backpg4.Name = "backpg4";
             this.backpg4.Size = new System.Drawing.Size(100, 50);
             this.backpg4.TabIndex = 37;
@@ -568,7 +535,7 @@ namespace bluetoothmain
             this.pan16cb.AutoSize = true;
             this.pan16cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan16cb.Location = new System.Drawing.Point(860, 556);
-            this.pan16cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan16cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan16cb.Name = "pan16cb";
             this.pan16cb.Size = new System.Drawing.Size(132, 35);
             this.pan16cb.TabIndex = 35;
@@ -581,7 +548,7 @@ namespace bluetoothmain
             this.pan15cb.AutoSize = true;
             this.pan15cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan15cb.Location = new System.Drawing.Point(860, 513);
-            this.pan15cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan15cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan15cb.Name = "pan15cb";
             this.pan15cb.Size = new System.Drawing.Size(132, 35);
             this.pan15cb.TabIndex = 34;
@@ -594,7 +561,7 @@ namespace bluetoothmain
             this.pan14cb.AutoSize = true;
             this.pan14cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan14cb.Location = new System.Drawing.Point(860, 470);
-            this.pan14cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan14cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan14cb.Name = "pan14cb";
             this.pan14cb.Size = new System.Drawing.Size(132, 35);
             this.pan14cb.TabIndex = 33;
@@ -607,7 +574,7 @@ namespace bluetoothmain
             this.pan13cb.AutoSize = true;
             this.pan13cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan13cb.Location = new System.Drawing.Point(860, 427);
-            this.pan13cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan13cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan13cb.Name = "pan13cb";
             this.pan13cb.Size = new System.Drawing.Size(132, 35);
             this.pan13cb.TabIndex = 32;
@@ -620,7 +587,7 @@ namespace bluetoothmain
             this.pan12cb.AutoSize = true;
             this.pan12cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan12cb.Location = new System.Drawing.Point(860, 384);
-            this.pan12cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan12cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan12cb.Name = "pan12cb";
             this.pan12cb.Size = new System.Drawing.Size(132, 35);
             this.pan12cb.TabIndex = 31;
@@ -633,7 +600,7 @@ namespace bluetoothmain
             this.pan11cb.AutoSize = true;
             this.pan11cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan11cb.Location = new System.Drawing.Point(860, 341);
-            this.pan11cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan11cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan11cb.Name = "pan11cb";
             this.pan11cb.Size = new System.Drawing.Size(132, 35);
             this.pan11cb.TabIndex = 30;
@@ -646,7 +613,7 @@ namespace bluetoothmain
             this.pan10cb.AutoSize = true;
             this.pan10cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan10cb.Location = new System.Drawing.Point(860, 298);
-            this.pan10cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan10cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan10cb.Name = "pan10cb";
             this.pan10cb.Size = new System.Drawing.Size(132, 35);
             this.pan10cb.TabIndex = 29;
@@ -659,7 +626,7 @@ namespace bluetoothmain
             this.pan9cb.AutoSize = true;
             this.pan9cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan9cb.Location = new System.Drawing.Point(860, 255);
-            this.pan9cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan9cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan9cb.Name = "pan9cb";
             this.pan9cb.Size = new System.Drawing.Size(116, 35);
             this.pan9cb.TabIndex = 28;
@@ -672,7 +639,7 @@ namespace bluetoothmain
             this.pan8cb.AutoSize = true;
             this.pan8cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan8cb.Location = new System.Drawing.Point(661, 556);
-            this.pan8cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan8cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan8cb.Name = "pan8cb";
             this.pan8cb.Size = new System.Drawing.Size(116, 35);
             this.pan8cb.TabIndex = 27;
@@ -685,7 +652,7 @@ namespace bluetoothmain
             this.pan7cb.AutoSize = true;
             this.pan7cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan7cb.Location = new System.Drawing.Point(661, 513);
-            this.pan7cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan7cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan7cb.Name = "pan7cb";
             this.pan7cb.Size = new System.Drawing.Size(116, 35);
             this.pan7cb.TabIndex = 26;
@@ -698,7 +665,7 @@ namespace bluetoothmain
             this.pan6cb.AutoSize = true;
             this.pan6cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan6cb.Location = new System.Drawing.Point(661, 470);
-            this.pan6cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan6cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan6cb.Name = "pan6cb";
             this.pan6cb.Size = new System.Drawing.Size(116, 35);
             this.pan6cb.TabIndex = 25;
@@ -711,7 +678,7 @@ namespace bluetoothmain
             this.pan5cb.AutoSize = true;
             this.pan5cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan5cb.Location = new System.Drawing.Point(661, 427);
-            this.pan5cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan5cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan5cb.Name = "pan5cb";
             this.pan5cb.Size = new System.Drawing.Size(116, 35);
             this.pan5cb.TabIndex = 24;
@@ -724,7 +691,7 @@ namespace bluetoothmain
             this.pan4cb.AutoSize = true;
             this.pan4cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan4cb.Location = new System.Drawing.Point(661, 384);
-            this.pan4cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan4cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan4cb.Name = "pan4cb";
             this.pan4cb.Size = new System.Drawing.Size(116, 35);
             this.pan4cb.TabIndex = 23;
@@ -737,7 +704,7 @@ namespace bluetoothmain
             this.pan3cb.AutoSize = true;
             this.pan3cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan3cb.Location = new System.Drawing.Point(661, 341);
-            this.pan3cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan3cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan3cb.Name = "pan3cb";
             this.pan3cb.Size = new System.Drawing.Size(116, 35);
             this.pan3cb.TabIndex = 22;
@@ -750,7 +717,7 @@ namespace bluetoothmain
             this.pan2cb.AutoSize = true;
             this.pan2cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan2cb.Location = new System.Drawing.Point(661, 298);
-            this.pan2cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan2cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan2cb.Name = "pan2cb";
             this.pan2cb.Size = new System.Drawing.Size(116, 35);
             this.pan2cb.TabIndex = 21;
@@ -763,7 +730,7 @@ namespace bluetoothmain
             this.pan1cb.AutoSize = true;
             this.pan1cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pan1cb.Location = new System.Drawing.Point(661, 255);
-            this.pan1cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan1cb.Margin = new System.Windows.Forms.Padding(4);
             this.pan1cb.Name = "pan1cb";
             this.pan1cb.Size = new System.Drawing.Size(116, 35);
             this.pan1cb.TabIndex = 20;
@@ -776,11 +743,11 @@ namespace bluetoothmain
             this.tabPage6.Controls.Add(this.backpg6);
             this.tabPage6.Controls.Add(this.connectwifi);
             this.tabPage6.Controls.Add(this.label3);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage6.Size = new System.Drawing.Size(1699, 857);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage6.Size = new System.Drawing.Size(1592, 860);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -790,7 +757,7 @@ namespace bluetoothmain
             // 
             this.backpg6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backpg6.Location = new System.Drawing.Point(32, 443);
-            this.backpg6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backpg6.Margin = new System.Windows.Forms.Padding(4);
             this.backpg6.Name = "backpg6";
             this.backpg6.Size = new System.Drawing.Size(104, 37);
             this.backpg6.TabIndex = 38;
@@ -802,7 +769,7 @@ namespace bluetoothmain
             // 
             this.connectwifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.connectwifi.Location = new System.Drawing.Point(1072, 438);
-            this.connectwifi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.connectwifi.Margin = new System.Windows.Forms.Padding(4);
             this.connectwifi.Name = "connectwifi";
             this.connectwifi.Size = new System.Drawing.Size(178, 76);
             this.connectwifi.TabIndex = 1;
@@ -841,11 +808,11 @@ namespace bluetoothmain
             this.tabPage7.Controls.Add(this.wfpan3cb);
             this.tabPage7.Controls.Add(this.wfpan2cb);
             this.tabPage7.Controls.Add(this.wfpan1cb);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage7.Size = new System.Drawing.Size(1699, 857);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage7.Size = new System.Drawing.Size(1592, 860);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "tabPage7";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -855,7 +822,7 @@ namespace bluetoothmain
             // 
             this.backpg7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backpg7.Location = new System.Drawing.Point(28, 960);
-            this.backpg7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backpg7.Margin = new System.Windows.Forms.Padding(4);
             this.backpg7.Name = "backpg7";
             this.backpg7.Size = new System.Drawing.Size(100, 50);
             this.backpg7.TabIndex = 69;
@@ -867,7 +834,7 @@ namespace bluetoothmain
             // 
             this.disconnectWF.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.disconnectWF.Location = new System.Drawing.Point(8, 750);
-            this.disconnectWF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.disconnectWF.Margin = new System.Windows.Forms.Padding(4);
             this.disconnectWF.Name = "disconnectWF";
             this.disconnectWF.Size = new System.Drawing.Size(150, 50);
             this.disconnectWF.TabIndex = 68;
@@ -880,7 +847,7 @@ namespace bluetoothmain
             this.wfpan16cb.AutoSize = true;
             this.wfpan16cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan16cb.Location = new System.Drawing.Point(860, 556);
-            this.wfpan16cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan16cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan16cb.Name = "wfpan16cb";
             this.wfpan16cb.Size = new System.Drawing.Size(132, 35);
             this.wfpan16cb.TabIndex = 67;
@@ -893,7 +860,7 @@ namespace bluetoothmain
             this.wfpan15cb.AutoSize = true;
             this.wfpan15cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan15cb.Location = new System.Drawing.Point(860, 513);
-            this.wfpan15cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan15cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan15cb.Name = "wfpan15cb";
             this.wfpan15cb.Size = new System.Drawing.Size(132, 35);
             this.wfpan15cb.TabIndex = 66;
@@ -906,7 +873,7 @@ namespace bluetoothmain
             this.wfpan14cb.AutoSize = true;
             this.wfpan14cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan14cb.Location = new System.Drawing.Point(860, 470);
-            this.wfpan14cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan14cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan14cb.Name = "wfpan14cb";
             this.wfpan14cb.Size = new System.Drawing.Size(132, 35);
             this.wfpan14cb.TabIndex = 65;
@@ -919,7 +886,7 @@ namespace bluetoothmain
             this.wfpan13cb.AutoSize = true;
             this.wfpan13cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan13cb.Location = new System.Drawing.Point(860, 427);
-            this.wfpan13cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan13cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan13cb.Name = "wfpan13cb";
             this.wfpan13cb.Size = new System.Drawing.Size(132, 35);
             this.wfpan13cb.TabIndex = 64;
@@ -932,7 +899,7 @@ namespace bluetoothmain
             this.wfpan12cb.AutoSize = true;
             this.wfpan12cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan12cb.Location = new System.Drawing.Point(860, 384);
-            this.wfpan12cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan12cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan12cb.Name = "wfpan12cb";
             this.wfpan12cb.Size = new System.Drawing.Size(132, 35);
             this.wfpan12cb.TabIndex = 63;
@@ -945,7 +912,7 @@ namespace bluetoothmain
             this.wfpan11cb.AutoSize = true;
             this.wfpan11cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan11cb.Location = new System.Drawing.Point(860, 341);
-            this.wfpan11cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan11cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan11cb.Name = "wfpan11cb";
             this.wfpan11cb.Size = new System.Drawing.Size(132, 35);
             this.wfpan11cb.TabIndex = 62;
@@ -958,7 +925,7 @@ namespace bluetoothmain
             this.wfpan10cb.AutoSize = true;
             this.wfpan10cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan10cb.Location = new System.Drawing.Point(860, 298);
-            this.wfpan10cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan10cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan10cb.Name = "wfpan10cb";
             this.wfpan10cb.Size = new System.Drawing.Size(132, 35);
             this.wfpan10cb.TabIndex = 61;
@@ -971,7 +938,7 @@ namespace bluetoothmain
             this.wfpan9cb.AutoSize = true;
             this.wfpan9cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan9cb.Location = new System.Drawing.Point(860, 255);
-            this.wfpan9cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan9cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan9cb.Name = "wfpan9cb";
             this.wfpan9cb.Size = new System.Drawing.Size(116, 35);
             this.wfpan9cb.TabIndex = 60;
@@ -984,7 +951,7 @@ namespace bluetoothmain
             this.wfpan8cb.AutoSize = true;
             this.wfpan8cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan8cb.Location = new System.Drawing.Point(661, 556);
-            this.wfpan8cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan8cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan8cb.Name = "wfpan8cb";
             this.wfpan8cb.Size = new System.Drawing.Size(116, 35);
             this.wfpan8cb.TabIndex = 59;
@@ -997,7 +964,7 @@ namespace bluetoothmain
             this.wfpan7cb.AutoSize = true;
             this.wfpan7cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan7cb.Location = new System.Drawing.Point(661, 513);
-            this.wfpan7cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan7cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan7cb.Name = "wfpan7cb";
             this.wfpan7cb.Size = new System.Drawing.Size(116, 35);
             this.wfpan7cb.TabIndex = 58;
@@ -1010,7 +977,7 @@ namespace bluetoothmain
             this.wfpan6cb.AutoSize = true;
             this.wfpan6cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan6cb.Location = new System.Drawing.Point(661, 470);
-            this.wfpan6cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan6cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan6cb.Name = "wfpan6cb";
             this.wfpan6cb.Size = new System.Drawing.Size(116, 35);
             this.wfpan6cb.TabIndex = 57;
@@ -1023,7 +990,7 @@ namespace bluetoothmain
             this.wfpan5cb.AutoSize = true;
             this.wfpan5cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan5cb.Location = new System.Drawing.Point(661, 427);
-            this.wfpan5cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan5cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan5cb.Name = "wfpan5cb";
             this.wfpan5cb.Size = new System.Drawing.Size(116, 35);
             this.wfpan5cb.TabIndex = 56;
@@ -1036,7 +1003,7 @@ namespace bluetoothmain
             this.wfpan4cb.AutoSize = true;
             this.wfpan4cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan4cb.Location = new System.Drawing.Point(661, 384);
-            this.wfpan4cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan4cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan4cb.Name = "wfpan4cb";
             this.wfpan4cb.Size = new System.Drawing.Size(116, 35);
             this.wfpan4cb.TabIndex = 55;
@@ -1049,7 +1016,7 @@ namespace bluetoothmain
             this.wfpan3cb.AutoSize = true;
             this.wfpan3cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan3cb.Location = new System.Drawing.Point(661, 341);
-            this.wfpan3cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan3cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan3cb.Name = "wfpan3cb";
             this.wfpan3cb.Size = new System.Drawing.Size(116, 35);
             this.wfpan3cb.TabIndex = 54;
@@ -1062,7 +1029,7 @@ namespace bluetoothmain
             this.wfpan2cb.AutoSize = true;
             this.wfpan2cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan2cb.Location = new System.Drawing.Point(661, 298);
-            this.wfpan2cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan2cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan2cb.Name = "wfpan2cb";
             this.wfpan2cb.Size = new System.Drawing.Size(116, 35);
             this.wfpan2cb.TabIndex = 53;
@@ -1075,7 +1042,7 @@ namespace bluetoothmain
             this.wfpan1cb.AutoSize = true;
             this.wfpan1cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wfpan1cb.Location = new System.Drawing.Point(661, 255);
-            this.wfpan1cb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wfpan1cb.Margin = new System.Windows.Forms.Padding(4);
             this.wfpan1cb.Name = "wfpan1cb";
             this.wfpan1cb.Size = new System.Drawing.Size(116, 35);
             this.wfpan1cb.TabIndex = 52;
@@ -1087,11 +1054,11 @@ namespace bluetoothmain
             // 
             this.tabPage8.Controls.Add(this.svLT);
             this.tabPage8.Controls.Add(this.svTH);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage8.Size = new System.Drawing.Size(1699, 857);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage8.Size = new System.Drawing.Size(1592, 860);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "tabPage8";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1100,7 +1067,7 @@ namespace bluetoothmain
             // 
             this.svLT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.svLT.Location = new System.Drawing.Point(824, 281);
-            this.svLT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.svLT.Margin = new System.Windows.Forms.Padding(4);
             this.svLT.Name = "svLT";
             this.svLT.Size = new System.Drawing.Size(197, 71);
             this.svLT.TabIndex = 1;
@@ -1111,7 +1078,7 @@ namespace bluetoothmain
             // 
             this.svTH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.svTH.Location = new System.Drawing.Point(476, 281);
-            this.svTH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.svTH.Margin = new System.Windows.Forms.Padding(4);
             this.svTH.Name = "svTH";
             this.svTH.Size = new System.Drawing.Size(197, 71);
             this.svTH.TabIndex = 0;
@@ -1122,11 +1089,11 @@ namespace bluetoothmain
             // 
             this.tabPage9.Controls.Add(this.comusb);
             this.tabPage9.Controls.Add(this.backpg9);
-            this.tabPage9.Location = new System.Drawing.Point(4, 25);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage9.Size = new System.Drawing.Size(1699, 857);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage9.Size = new System.Drawing.Size(1592, 860);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "tabPage9";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -1144,13 +1111,52 @@ namespace bluetoothmain
             // 
             this.backpg9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backpg9.Location = new System.Drawing.Point(340, 466);
-            this.backpg9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backpg9.Margin = new System.Windows.Forms.Padding(4);
             this.backpg9.Name = "backpg9";
             this.backpg9.Size = new System.Drawing.Size(191, 61);
             this.backpg9.TabIndex = 5;
             this.backpg9.Text = "BACK";
             this.backpg9.UseVisualStyleBackColor = true;
             this.backpg9.Click += new System.EventHandler(this.backpg9_Click);
+            // 
+            // kt
+            // 
+            this.kt.AutoSize = true;
+            this.kt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kt.Location = new System.Drawing.Point(709, 475);
+            this.kt.Margin = new System.Windows.Forms.Padding(4);
+            this.kt.Name = "kt";
+            this.kt.Size = new System.Drawing.Size(217, 93);
+            this.kt.TabIndex = 5;
+            this.kt.Text = "Kiểm tra";
+            this.kt.UseVisualStyleBackColor = true;
+            // 
+            // hs
+            // 
+            this.hs.AutoSize = true;
+            this.hs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hs.Location = new System.Drawing.Point(709, 338);
+            this.hs.Margin = new System.Windows.Forms.Padding(4);
+            this.hs.Name = "hs";
+            this.hs.Size = new System.Drawing.Size(217, 93);
+            this.hs.TabIndex = 4;
+            this.hs.Text = "Sinh Viên";
+            this.hs.UseVisualStyleBackColor = true;
+            this.hs.Click += new System.EventHandler(this.hs_Click_1);
+            // 
+            // gv
+            // 
+            this.gv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gv.AutoSize = true;
+            this.gv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gv.Location = new System.Drawing.Point(709, 201);
+            this.gv.Margin = new System.Windows.Forms.Padding(4);
+            this.gv.Name = "gv";
+            this.gv.Size = new System.Drawing.Size(217, 93);
+            this.gv.TabIndex = 3;
+            this.gv.Text = "Giáo Viên";
+            this.gv.UseVisualStyleBackColor = true;
+            this.gv.Click += new System.EventHandler(this.gv_Click_1);
             // 
             // ping_timer
             // 
@@ -1175,7 +1181,7 @@ namespace bluetoothmain
             this.ClientSize = new System.Drawing.Size(1203, 681);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "mainmenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1183,13 +1189,11 @@ namespace bluetoothmain
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainmenu_FormClosing);
             this.Load += new System.EventHandler(this.mainmenu_Load);
             this.panel1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.setting_panel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
